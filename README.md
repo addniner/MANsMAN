@@ -1,5 +1,45 @@
 # MANsMAN
 
+> SSAFY 10기 특화프로젝트 최우수상 | 남성 화장품 추천 서비스
+
+## My Contribution
+
+| | |
+|---|---|
+| **Role** | Backend, Infra |
+| **Period** | 2024.02 ~ 2024.04 (6주) |
+| **Team** | 6명 (BE 4, FE 2) |
+
+### What I Did
+
+#### 1. 커뮤니티 게시판 API (RESTful, Spring Data JPA)
+- 전체 약 60개 API 중 17개 담당
+- 게시물 CRUD + 사진 다중 이미지 순서 관리 + 좋아요/스크랩
+- 댓글 CRUD + 댓글 좋아요 (별도 Controller 분리)
+- ERD 설계 및 JPA Entity 구현 (Board, Comment, BoardImage, Scrap, BoardLike, CommentLike 등 7개 테이블)
+- 조회수/댓글수/스크랩수 카운팅 기능
+- 권한 검증: 본인 게시물/댓글만 수정/삭제 가능하도록 구현
+
+#### 2. Jenkins CI/CD 파이프라인
+- GitLab Webhook으로 코드 변경사항 자동 감지
+- **폴더 수준 변경 감지**로 변경된 컴포넌트(Spring/FastAPI/Frontend)만 선별 빌드/배포
+- Credentials로 secret 파일 및 API 키 관리
+- 배포 성공/실패 시 Mattermost 알림 전송
+
+#### 3. Docker 인프라 구축 (AWS EC2)
+- Nginx: Reverse Proxy + SSL 인증서 설정
+- 컨테이너 구성: Jenkins(9090), Spring(8080), FastAPI(8000), MySQL(3306), Redis(6379)
+- Docker Compose로 전체 서비스 오케스트레이션
+- FastAPI Docker 이미지 최적화: Python 3.12 업그레이드, tensorflow-intel 제거, 호환성 이슈 트러블슈팅 (7회 반복 수정)
+
+#### 4. 기타
+- PPT 제작 및 최종 발표 담당
+
+### Tech Stack
+`Spring Boot` `Spring Data JPA` `MySQL` `Redis` `Docker` `Nginx` `Jenkins` `AWS EC2`
+
+---
+
 ## 📌 개요
 MANsMAN은 사용자의 **피부타입을 분석**하고 분석결과와 화장품 사용패턴에 따라 **맞춤형 추천 서비스**를 제공하는 모바일 앱 서비스입니다.
 
