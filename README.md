@@ -1,6 +1,6 @@
 # MANsMAN
 
-> SSAFY 10기 특화프로젝트 최우수상 | 남성 화장품 추천 서비스
+> SSAFY 10기 특화프로젝트 | 남성 화장품 추천 서비스
 
 ## My Contribution
 
